@@ -1,0 +1,54 @@
+/* RAISE 360: Digitalization section, bento grid on navy (loaded last) */
+#digitalization{ background:linear-gradient(160deg,rgba(11,30,45,.94) 0%,rgba(15,58,85,.9) 100%),url(../img/hero-bg.jpg) center/cover no-repeat; }
+#digitalization .section-title p{ color:#fff; }
+body main #digitalization .dg-credit{
+  display:block; text-align:center;
+  max-width:760px; margin:0 auto 48px; font-size:16px; line-height:1.6; color:rgba(255,255,255,.8);
+}
+#digitalization .dg-credit i{ color:#29a9e1; font-size:20px; vertical-align:-3px; margin-right:8px; }
+
+#digitalization .dg-grid{
+  display:grid; grid-template-columns:repeat(4,1fr); grid-auto-rows:minmax(230px,auto); gap:18px;
+}
+#digitalization .dg-a{ grid-column:1 / span 2; grid-row:1 / span 2; }
+#digitalization .dg-f{ grid-column:1 / span 2; }
+#digitalization .dg-g{ grid-column:3 / span 2; }
+
+#digitalization .dg-card{
+  display:flex; flex-direction:column; justify-content:flex-end; position:relative; overflow:hidden;
+  padding:26px 24px; border-radius:var(--radius-card,20px);
+  background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12);
+  transition:border-color .25s, background-color .25s;
+}
+#digitalization .dg-card:hover{ border-color:#29a9e1; background:rgba(255,255,255,.11); }
+#digitalization .dg-card > i{
+  position:static; margin-bottom:0; flex:0 0 auto; margin-bottom:auto; width:48px; height:48px; border-radius:14px;
+  display:flex; align-items:center; justify-content:center; font-size:24px; color:#fff; background:rgba(41,169,225,.28);
+}
+#digitalization .dg-card > i + h4{ margin-top:22px!important; }
+body main #digitalization .dg-card h4{ font-size:19px!important; font-weight:700; line-height:1.3; color:#fff; margin:0 0 8px; }
+body main #digitalization .dg-card p{ font-size:15px; line-height:1.55; color:rgba(255,255,255,.78); margin:0; }
+
+/* featured tile */
+#digitalization .dg-a > i{ margin-bottom:auto; }
+#digitalization .dg-a{ background:#1b78a8; border-color:transparent; padding:34px 32px; }
+#digitalization .dg-a:hover{ background:#2287bb; border-color:transparent; }
+#digitalization .dg-a > i{ width:72px; height:72px; border-radius:20px; font-size:36px; background:rgba(255,255,255,.18); }
+body main #digitalization .dg-a h4{ font-size:28px!important; line-height:1.2; }
+body main #digitalization .dg-a p{ font-size:17px; color:rgba(255,255,255,.9); }
+
+#digitalization .dg-cta{ display:inline-block; background:#29a9e1; color:#fff; font-weight:600; padding:14px 34px; border-radius:50px; text-decoration:none; transition:background-color .2s; }
+#digitalization .dg-cta:hover{ background:#fff; color:#0f2a3d; }
+#digitalization .dg-cta:focus-visible{ outline:3px solid #fff; outline-offset:3px; }
+
+@media (max-width:991px){
+  #digitalization .dg-grid{ grid-template-columns:repeat(2,1fr); }
+  #digitalization .dg-a{ grid-column:1 / -1; grid-row:auto; min-height:260px; }
+  #digitalization .dg-f,#digitalization .dg-g{ grid-column:auto; }
+}
+@media (max-width:575px){
+  #digitalization .dg-grid{ grid-template-columns:1fr; grid-auto-rows:minmax(230px,auto); }
+  #digitalization .dg-card{ min-height:170px; }
+  body main #digitalization .dg-a h4{ font-size:24px!important; }
+}
+
